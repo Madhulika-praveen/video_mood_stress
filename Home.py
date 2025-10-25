@@ -34,6 +34,14 @@ p, span { font-size: 26px; }
     font-size: 30px !important;
     font-weight: bold;
 }
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    margin-top: 40px;
+}
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
@@ -68,10 +76,9 @@ st.markdown("""
 st.header("How It Works")
 col1, col2 = st.columns([1, 2])
 with col1:
-    st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
+    st.markdown("<div style='margin-top: 8px;'></div>", unsafe_allow_html=True)
     st.image(
-        "images/feature.png",
-        caption="Advanced AI Analysis"
+        "images/feature.png"
     )
 with col2:
     st.subheader("Real-Time Processing")
@@ -98,7 +105,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.header("Emotion Spectrum")
-#st.write("<p style='text-align: center; font-size: 26px;'>Our model detects a wide range of emotions:</p>", unsafe_allow_html=True)
 
 # First row: Happy, Sad, Surprised
 img_col1, img_col2, img_col3 = st.columns(3)
@@ -116,6 +122,22 @@ with img_col6: st.image("images/disgust.png", caption="Disgust")
 img_col7, _, _ = st.columns(3)  # center Neutral image
 with img_col7: st.image("images/neutral.png", caption="Neutral")
 
+# Add descriptive text here
+st.markdown("""
+<p style='text-align: center; font-size: 22px;'>
+These are the core emotions our system can detect. By analyzing subtle facial expressions, 
+we provide real-time insights into a person's emotional state, helping users better understand 
+moods, reactions, and overall emotional wellbeing.
+</p>
+""", unsafe_allow_html=True)
 
-st.markdown("<div style='height: 300px;'></div>", unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
+st.markdown("<div style='height: 40px;'></div>", unsafe_allow_html=True)
+
+# ----------------- FOOTER -----------------
+st.markdown("""
+<div class="footer">
+Built by <b>Madhulika Praveen, Lahari BK and Pooja BL</b> – <b>AI VERSE 2.0</b>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("<div style='height: 5px;'></div>", unsafe_allow_html=True)
